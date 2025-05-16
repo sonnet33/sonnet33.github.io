@@ -1,0 +1,326 @@
+/* 分类和标签列表容器样式 */
+.widget-wrapper.categorycloud, 
+.widget-wrapper.taglist {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  padding: 16px 20px;
+  margin-bottom: 20px;
+}
+
+.widget-wrapper.categorycloud .widget-header,
+.widget-wrapper.taglist .widget-header {
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  color: #888;
+  font-size: 1.1em;
+  font-weight: normal;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.widget-wrapper.categorycloud .widget-body,
+.widget-wrapper.taglist .widget-body {
+  padding: 0;
+}
+
+/* 分类列表样式 */
+.category-list, .tag-list {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 0;
+}
+
+.category-list-item, .tag-list-item {
+  margin: 0 0 6px 0 !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  background-color: transparent !important;
+  display: flex;
+  align-items: center;
+  line-height: 1.5;
+}
+
+.category-list-item:hover, .tag-list-item:hover {
+  background-color: transparent !important;
+  transform: translateX(4px);
+  transition: transform 0.3s ease;
+}
+
+.category-list-link, .tag-list-link {
+  text-decoration: none;
+  color: #555;
+  font-weight: normal;
+  position: relative;
+  padding-left: 28px;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  font-size: 1.05rem !important; /* 增大分类和标签链接的字体大小 */
+}
+
+/* 文件夹图标 */
+.category-list-link::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>');
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.7;
+}
+
+/* 标签索引样式 */
+.tag-list-link::before {
+  content: "#";
+  position: absolute;
+  left: 8px;
+  font-weight: bold;
+  opacity: 0.7;
+}
+
+.category-list-count, .tag-list-count {
+  font-size: 0.9em;
+  color: #999;
+  padding: 0;
+  border-radius: 0;
+  margin-left: 4px;
+}
+
+/* 标签云样式 - 改为垂直布局 */
+.tagcloud {
+  display: flex;
+  flex-direction: column; /* 改为垂直布局 */
+  gap: 8px;
+  padding: 0;
+}
+
+.tag-cloud-tags {
+  display: flex;
+  flex-direction: column; /* 改为垂直布局 */
+  gap: 8px;
+  padding: 0;
+}
+
+a.tag-cloud-0, a.tag-cloud-1, a.tag-cloud-2, a.tag-cloud-3, a.tag-cloud-4, a.tag-cloud-5, a.tag-cloud-6, a.tag-cloud-7, a.tag-cloud-8, a.tag-cloud-9, a.tag-cloud-10 {
+  display: flex !important;
+  background-color: #f5f5f5 !important;
+  padding: 4px 10px !important;
+  border-radius: 4px !important;
+  margin-right: 0 !important;
+  margin-bottom: 5px !important;
+  color: #555 !important;
+  font-size: 1.05rem !important; /* 增大标签云字体大小 */
+  line-height: 1.4em !important;
+  transition: all 0.3s ease !important;
+}
+
+a.tag-cloud-0:hover, a.tag-cloud-1:hover, a.tag-cloud-2:hover, a.tag-cloud-3:hover, a.tag-cloud-4:hover, a.tag-cloud-5:hover, a.tag-cloud-6:hover, a.tag-cloud-7:hover, a.tag-cloud-8:hover, a.tag-cloud-9:hover, a.tag-cloud-10:hover {
+  background-color: #e0e0e0 !important;
+  transform: translateX(4px) !important;
+  color: #000 !important;
+}
+
+.tag-cloud-tag {
+  font-size: 1.05rem !important; /* 增大标签字体大小 */
+  color: #555;
+  background-color: #f5f5f5;
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-right: 0;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.tag-cloud-tag:hover {
+  background-color: #e0e0e0;
+  transform: translateY(-2px);
+  color: #000;
+}
+
+/* 空列表样式 */
+.empty-list {
+  color: var(--text-p3);
+  font-style: italic;
+  text-align: center;
+  padding: 10px;
+  background-color: var(--block);
+  border-radius: 6px;
+}
+
+/* 标签列表样式 */
+.widget-wrapper.taglist .tag-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* 覆盖可能的冲突样式 */
+.widget-wrapper.category-list-widget .category-list,
+.widget-wrapper.categorycloud .category-list {
+  padding-left: 0 !important;
+  margin: 0 !important;
+}
+
+.tagcloud a.tag-list-link {
+  margin-right: 0;
+  position: relative;
+  padding-left: 24px;
+  display: flex;
+  align-items: center;
+}
+
+.tagcloud a.tag-list-link::before {
+  content: "#";
+  position: absolute;
+  left: 4px;
+  font-weight: bold;
+  opacity: 0.7;
+}
+
+/* 针对hexo-theme-stellar主题的样式覆盖 */
+.categorycloud .category-list a,
+.taglist .tag-list a {
+  display: flex !important;
+  align-items: center !important;
+  padding-left: 28px !important;
+  position: relative !important;
+  color: #555 !important;
+  text-decoration: none !important;
+  line-height: 1.5 !important;
+  transition: transform 0.3s ease !important;
+  font-size: 1.05rem !important; /* 增大分类和标签链接的字体大小 */
+}
+
+.categorycloud .category-list a:hover,
+.taglist .tag-list a:hover {
+  transform: translateX(4px) !important;
+  color: #000 !important;
+}
+
+/* 最近更新列表样式 */
+.widget-wrapper.post-list .widget-body a.item.title {
+  font-size: 1.05rem !important; /* 增大最近更新列表项字体大小 */
+  margin-bottom: 8px !important;
+  line-height: 1.5 !important;
+}
+
+.widget-wrapper.post-list .widget-body .title strong {
+  font-size: 1rem !important; /* 增大最近更新列表项加粗部分字体大小 */
+}
+
+/* 左侧边栏所有小部件主体内容 */
+aside.l_side .widget.widget-wrapper .widget-body {
+  font-size: 1rem !important; /* 增大左侧边栏所有小部件内容的字体大小 */
+}
+
+/* 文章正文字体大小调整 */
+.md-text {
+  font-size: 1.2rem !important; /* 增大正文字体大小 */
+  line-height: 1.8 !important;
+}
+
+.md-text p {
+  font-size: 1.2rem !important; /* 增大段落字体大小 */
+  line-height: 1.8 !important;
+  margin-bottom: 1.2em !important;
+}
+
+.md-text ul,
+.md-text ol {
+  font-size: 1.2rem !important; /* 增大列表字体大小 */
+  line-height: 1.8 !important;
+  margin-bottom: 1.2em !important;
+}
+
+.md-text li {
+  font-size: 1.2rem !important; /* 确保列表项字体大小统一 */
+  margin-bottom: 0.5em !important;
+}
+
+.md-text h1 {
+  font-size: 2rem !important; /* 增大一级标题字体大小 */
+  margin-top: 1.6em !important;
+  margin-bottom: 0.8em !important;
+}
+
+.md-text h2 {
+  font-size: 1.75rem !important; /* 增大二级标题字体大小 */
+  margin-top: 1.4em !important;
+  margin-bottom: 0.7em !important;
+}
+
+.md-text h3 {
+  font-size: 1.5rem !important; /* 增大三级标题字体大小 */
+  margin-top: 1.2em !important;
+  margin-bottom: 0.6em !important;
+}
+
+.md-text h4 {
+  font-size: 1.3rem !important; /* 增大四级标题字体大小 */
+  margin-top: 1em !important;
+  margin-bottom: 0.5em !important;
+}
+
+/* 文章目录字体大小调整 */
+.toc-wrapper .toc-list {
+  font-size: 1.1rem !important; /* 增大目录字体大小 */
+  line-height: 1.6 !important;
+}
+
+.toc-item {
+  font-size: 1.1rem !important; /* 确保目录项字体大小统一 */
+  line-height: 1.6 !important;
+  margin-bottom: 0.5em !important;
+}
+
+.toc-child {
+  font-size: 1.05rem !important; /* 增大子目录字体大小 */
+}
+
+/* 右侧目录样式加强 */
+#toc-div {
+  font-size: 1.1rem !important; /* 确保右侧目录字体大小 */
+}
+
+#toc-div .toc-item a {
+  font-size: 1.1rem !important; /* 目录链接字体大小 */
+  line-height: 1.6 !important;
+}
+
+#toc-div .toc-child a {
+  font-size: 1.05rem !important; /* 子目录链接字体大小 */
+}
+
+/* 移动端样式优化 */
+@media (max-width: 768px) {
+  .widget-wrapper.categorycloud, 
+  .widget-wrapper.taglist {
+    padding: 12px 16px;
+  }
+  
+  .md-text,
+  .md-text p,
+  .md-text ul,
+  .md-text ol,
+  .md-text li {
+    font-size: 1.1rem !important; /* 移动设备上稍微小一点的正文字体 */
+  }
+  
+  .toc-wrapper .toc-list,
+  .toc-item,
+  #toc-div,
+  #toc-div .toc-item a {
+    font-size: 1.05rem !important; /* 移动设备上稍微小一点的目录字体 */
+  }
+  
+  .toc-child,
+  #toc-div .toc-child a {
+    font-size: 1rem !important; /* 移动设备上稍微小一点的子目录字体 */
+  }
+} 
